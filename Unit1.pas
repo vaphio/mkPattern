@@ -162,7 +162,7 @@ begin
   sc := 'uint16_t ptnCode[' + IntToStr(w) + '] = {';
   dlst.Add(sc);
   for i := 0 to w-1 do begin
-    buf := '  B';
+    buf := '  0b';
     for j := 0 to h-1 do begin
       cl := ImageOutput.Canvas.Pixels[i, j];
       if cl=0 then buf := buf + '0'
@@ -230,8 +230,6 @@ procedure TForm1.loadAttr(fname: TFileName);
 var
   ini: TMemIniFile;
   attrFName: TFilename;
-  txt, fnt: string;
-  fntSize: Integer;
 begin
   attrFName := ChangeFileExt(fname, attrExt);
   ini := TMemIniFile.Create(attrFName);
