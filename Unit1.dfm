@@ -231,20 +231,6 @@ object Form1: TForm1
         Action = XferC2B
       end
     end
-    object Settings1: TMenuItem
-      Caption = 'Settings(&S)'
-      object setnormaltxt1: TMenuItem
-        Action = setNormalTxt
-        AutoCheck = True
-        Default = True
-        GroupIndex = 1
-      end
-      object hedderfile1: TMenuItem
-        Action = setHedder
-        AutoCheck = True
-        GroupIndex = 1
-      end
-    end
   end
   object ActionList1: TActionList
     Left = 32
@@ -277,16 +263,6 @@ object Form1: TForm1
     object XferC2B: TAction
       Category = 'Function'
       Caption = 'Code to BMP'
-    end
-    object setNormalTxt: TAction
-      Category = 'Settings'
-      Caption = 'set normal txt'
-      OnExecute = setNormalTxtExecute
-    end
-    object setHedder: TAction
-      Category = 'Settings'
-      Caption = 'hedder file'
-      OnExecute = setHedderExecute
     end
     object FileExit1: TFileExit
       Category = 'Files'

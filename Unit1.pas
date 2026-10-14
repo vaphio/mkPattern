@@ -39,11 +39,6 @@ type
     XferB2C: TAction;
     XferC2B: TAction;
     CodetoBMP1: TMenuItem;
-    setNormalTxt: TAction;
-    setHedder: TAction;
-    Settings1: TMenuItem;
-    setnormaltxt1: TMenuItem;
-    hedderfile1: TMenuItem;
     N3: TMenuItem;
     FileExit1: TFileExit;
     QuitX1: TMenuItem;
@@ -61,8 +56,6 @@ type
     function mkTitle(fname: string): string;
     procedure openBMPExecute(Sender: TObject);
     procedure resizeBMP(bmp: TBitmap);
-    procedure setNormalTxtExecute(Sender: TObject);
-    procedure setHedderExecute(Sender: TObject);
     procedure openCodeExecute(Sender: TObject);
     procedure XferS2BExecute(Sender: TObject);
     procedure saveBMPExecute(Sender: TObject);
@@ -96,6 +89,8 @@ implementation
 procedure TForm1.btnClearClick(Sender: TObject);
 begin
   EditInput.Text := '';
+  Memo1.Lines.Clear;
+  ImageOutput.Picture := nil;
 end;
 
 procedure TForm1.cbFontListChange(Sender: TObject);
@@ -285,20 +280,6 @@ begin
   ImageOutput.Width := bmp.Width * scale;
   ImageOutput.Picture.Bitmap.Assign(bmp);
   dspSize;
-end;
-
-procedure TForm1.setHedderExecute(Sender: TObject);
-begin
-  setHedder.Checked := True;
-  sethedder.Checked := True;
-  setNormalTxt.Checked := False;
-end;
-
-procedure TForm1.setNormalTxtExecute(Sender: TObject);
-begin
-  setNormalTxt.Checked := True;
-  setnormaltxt.Checked := True;
-  setHedder.Checked := False;
 end;
 
 procedure TForm1.XferB2CExecute(Sender: TObject);
