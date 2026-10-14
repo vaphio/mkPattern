@@ -204,7 +204,7 @@ procedure TForm1.openCodeExecute(Sender: TObject);
 var
   FileName: TFileName;
 begin
-  OpenDialog1.FilterIndex := 2;
+  OpenDialog1.FilterIndex := rgCodeFmt.ItemIndex + 2;
   if OpenDialog1.Execute() then begin
     FileName := OpenDialog1.FileName;
     Memo1.Lines.LoadFromFile(FileName);

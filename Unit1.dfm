@@ -181,7 +181,6 @@ object Form1: TForm1
     TabOrder = 2
   end
   object OpenDialog1: TOpenDialog
-    DefaultExt = 'bmp'
     Filter = 'BMP'#12501#12449#12452#12523'|*.bmp|TXT'#12501#12449#12452#12523'|*.txt|Hedder'#12501#12449#12452#12523'|*.h'
     Left = 392
     Top = 168
