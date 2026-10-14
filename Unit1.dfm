@@ -29,8 +29,6 @@ object Form1: TForm1
     VertScrollBar.Visible = False
     Align = alLeft
     TabOrder = 0
-    ExplicitTop = 73
-    ExplicitHeight = 181
     object ImageOutput: TImage
       Left = 0
       Top = 0
@@ -49,7 +47,6 @@ object Form1: TForm1
     Height = 81
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 707
     object lblBmpSize: TLabel
       Left = 339
       Top = 43
@@ -182,9 +179,6 @@ object Form1: TForm1
     ParentFont = False
     ScrollBars = ssBoth
     TabOrder = 2
-    ExplicitTop = 73
-    ExplicitWidth = 231
-    ExplicitHeight = 181
   end
   object OpenDialog1: TOpenDialog
     DefaultExt = 'bmp'

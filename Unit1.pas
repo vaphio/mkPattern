@@ -223,7 +223,7 @@ var
   attrFName: TFilename;
 begin
   attrFName := ChangeFileExt(fname, attrExt);
-  ini := TMemIniFile.Create(attrFName);
+  ini := TMemIniFile.Create(attrFName, TEncoding.UTF8);
   ini.WriteString(sec, keyTxt, EditInput.Text);
   ini.WriteString(sec, keyFnt, cbFontList.Text);
   ini.WriteInteger(sec, keyPix, StrToInt(cbSize.Text));
@@ -272,7 +272,7 @@ begin
   SaveDialog1.FilterIndex := rgCodeFmt.ItemIndex + 3;
   if SaveDialog1.Execute() then begin
     FileName := SaveDialog1.FileName;
-    Memo1.Lines.SaveToFile(FileName);
+    Memo1.Lines.SaveToFile(FileName, TEncoding.UTF8);
     Form1.Caption := mkTitle(ExtractFileName(FileName));
   end;
 end;
